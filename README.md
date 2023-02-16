@@ -89,8 +89,6 @@ I am going to continue developing my javascript skills with future projects.
 
 - Frontend Mentor - [@mallow12](https://www.frontendmentor.io/profile/mallow12)
 
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
 ## Acknowledgments
 
 This is acknowledgement to God for making this project easy for me and my colleagues Abdurrahman and Badru fuad for their contribution in explaining and giving me more insights on part of this project.😀
