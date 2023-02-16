@@ -76,14 +76,9 @@ const updateTheme = () => {
   toggle.id = themeMain;
 };
 ```
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
-
 ### Continued development
 
 I am going to continue developing my javascript skills with future projects.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
 
 ## Author
 
