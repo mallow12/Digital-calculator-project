@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&family=League+Spartan:wght@700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.theme-1 {
+  --body-background-color: hsl(222, 26%, 31%);
+  --screen-background-color: hsl(224, 36%, 15%);
+  --tog-and-key-background: hsl(223, 31%, 20%);
+  --number-background: hsl(30, 25%, 89%);
+  --number-border: hsl(28, 16%, 65%);
+  --del-reset-background: hsl(225, 21%, 49%);
+  --togg-key: hsl(6, 63%, 50%);
+  --header-text-color: hsl(0, 0%, 100%);
+  --number-color: hsl(221, 14%, 31%);
+  --input-color: hsl(0, 0%, 100%);
+  --text-color: hsl(0, 0%, 100%);
+  --del-reset: hsl(222, 26%, 31%);
+  --equal-border: hsl(0, 80%, 35%);;
+}
+
+.theme-2 {
+  --body-background-color: hsl(0, 0%, 90%);
+  --screen-background-color: hsl(0, 0%, 93%);
+  --tog-and-key-background: hsl(0, 5%, 81%);
+  --number-background: hsl(45, 7%, 89%);
+  --number-border: hsl(35, 11%, 61%);
+  --del-reset-background: hsl(185, 42%, 37%);
+  --togg-key: hsl(25, 98%, 40%);
+  --header-text-color: hsl(60, 10%, 19%);
+  --text-color: hsl(0, 0%, 100%);
+  --del-reset: hsl(222, 26%, 31%);
+  --equal-border: hsl(0, 80%, 35%);
+}
+
+.theme-3 {
+  --body-background-color: hsl(268, 75%, 9%);
+  --screen-background-color: hsl(268, 71%, 12%);
+  --tog-and-key-background: hsl(268, 71%, 12%);
+  --number-background: hsl(268, 47%, 21%);
+  --number-border: hsl(290, 70%, 36%);
+  --del-reset-background: hsl(281, 89%, 26%);
+  --togg-key: hsl(176, 100%, 44%);
+  --header-text-color: hsl(52, 100%, 62%);
+  --number-color: hsl(52, 100%, 62%);
+  --input-color: hsl(52, 100%, 62%);
+  --text-color: hsl(0, 0%, 100%);
+  --del-reset:hsl(240, 70%, 66%);
+  --equal-border: hsl(176, 80%, 74%);
+}
+/* Body Style */
+body {
+  background-color: var(--body-background-color);
+  font-family: 'Lato', sans-serif;
+  font-family: 'League Spartan', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Container */
+.container {
+  width: 400px;
+}
+
+/* Header Style */
+.header {
+  display: flex;
+  justify-content: space-between;
+  color: var(--header-text-color);
+  padding-bottom: 20px;
+}
+
+h1 {
+  width: 270px;
+  font-size: 23px;
+  align-self: flex-end;
+}
+
+h5 {
+  align-self: flex-end;
+}
+
+.switch-no {
+  font-size: 14px;
+  margin-left: 5px;
+}
+
+.switch-no:nth-of-type(1n + 2) {
+  padding-left: 10px;
+}
+
+.toggle {
+  position: relative;
+  display: block;
+  width: 69px;
+  height: 24px;
+  border-radius: 160px;
+  background-color: var(--tog-and-key-background);
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.toggle .indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 25px;
+  height: 25px;
+  background-color: var(--togg-key);
+  border-radius: 50%;
+  transform: scale(0.7);
+}
+
+.toggle#theme-2 .indicator {
+  left: 24px;
+}
+
+.toggle#theme-3 .indicator {
+  left: 44px;
+}
+
+/* Dispaly Screen */
+.screen {
+  background-color: var(--screen-background-color);
+  color: var(--input-color);
+  width: inherit;
+  height: 6rem;
+  word-wrap: break-word;
+  border-radius: 10px;
+  font-size: 40px;
+  text-align: right;
+  padding: 25px 20px;
+  margin-bottom: 20px;
+}
+.screen:focus {
+  outline: 0;
+}
+
+/* Input Field */
+.buttons {
+  background-color: var(--tog-and-key-background);
+  display: grid;
+  padding: 25px;
+  border-radius: 10px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.item {
+  background-color: var(--number-background);
+  padding: 8px;
+  text-align: center;
+  border-radius: 8px;
+  font-size: 25px;
+  border-bottom: 3px solid var(--number-border);
+  color: var(--number-color);
+  cursor: pointer;
+}
+
+.item:active {
+  background-color: var(--input-color);
+}
+
+.item:nth-of-type(17) {
+  grid-column: 1/3;
+}
+.item:nth-of-type(18) {
+  grid-column: 3/5;
+}
+
+.del,
+.reset,
+.equal {
+  background-color: var(--del-reset-background);
+  border-bottom: 3px solid var(--del-reset);
+  color: var(--text-color);
+}
+
+.equal {
+  background-color: var(--togg-key);
+  border-bottom:3px solid var(--equal-border);
+}
+
+@media (max-width: 550px) {
+  .container {
+    width: 290px;
+  }
+
+  h1 {
+    width: 120px;
+  }
+
+  .buttons {
+    border-radius: 8px;
+    gap: 12px;
+  }
+
+  .item {
+    border-radius: 5px;
+  }
+}
+
+/* Footer */
+.attribution {
+  color: cadetblue;
+  font-size: 11px;
+  text-align: center;
+  margin-top: 10px;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
